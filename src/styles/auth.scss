@@ -1,0 +1,126 @@
+//estilizar o ID page-auth, que pode ser utilizado em qualquer pagina
+#page-auth {
+  display: flex;
+  align-items: stretch;
+  height: 100vh; //para ocupar o tamanho total da tela
+
+  aside {
+    flex: 7; //quantidade da tela que o container vai ocupar
+    background: green; //cor do aside
+    color: #fff; //fonte do aside
+
+    display: flex;
+    flex-direction: column; //o conteudo do aside ficar um abaixo do outro
+
+    justify-content: center; //para centralizar verticalmente os conteudos dentro do aside.
+
+    padding: 120px 80px; //para não ficar grudado nas bordas.
+    img {
+      max-width: 320px; //para nunca passar desse tamanho
+    }
+
+    strong {
+      font: 700 36px 'Poppins', sans-serif; //700 (encorpamento NEGRITO) 36px (tamanho fonte) ESTILO DA FONTE
+      line-height: 42px;
+      margin-top: 16px; //para distanciar do conteudo acima (imagem)
+    }
+    p {
+      font-size: 24px;
+      line-height: 32px; //altura da linha sempre um pouco maior que a fonte para não ficar grudado a parte de cima e de baixo
+      margin-top: 16px;
+      color: white;
+    }
+  }
+
+  main {
+    flex: 8;
+
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; //os 3 itens para deixar tudo centralizado
+  }
+
+  .main-content {
+    //. antes da classname criada
+    display: flex;
+    flex-direction: column; //o conteudo do aside ficar um abaixo do outro
+    width: 100%;
+    max-width: 320px;
+    align-items: stretch; //componentes estiquem para caber na largura maxima do container que e definido pelo max-width.
+    text-align: center;
+
+    > img {
+      //sinal de maior para pegar exclusivamente a imagem dentro do main content
+      align-self: center;
+    }
+
+    form {
+      input {
+        height: 50px;
+        border-radius: 8x;
+        padding: 0 16px;
+        background: #fff;
+        border: 1px solid #a8a8b3;
+      }
+    }
+    button {
+      margin-top: 16px;
+    }
+    button,
+    input {
+      width: 100%;
+    }
+  }
+  .create-room {
+    margin-top: 64px; //para distanciar bastante da logo
+    height: 50px;
+    border-radius: 8px;
+    font-weight: 500;
+    background: #ea4335;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; //os 3 itens para deixar tudo centralizado
+
+    cursor: pointer; //quando passar o mouse por cima para ficar no cursor
+    border: 0;
+
+    transition: filter 0.2s; //demorar o tempo para que o filtro do Hover funcione
+
+    img {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      filter: brightness(0.9); //ao passar o mouse por cima ficar mais escurinho
+    }
+  }
+  .separator {
+    font-size: 14px;
+    color: #a8a8b3;
+
+    display: flex;
+    align-items: center;
+    margin: 32px 0;
+
+    //propriedades do CSS para criar traços de separação do texto
+    &::before {
+      content: ''; //sempre inicia com esse content, senão nada aparece
+      flex: 1; //quantidade flexivel da tela que o container vai ocupar
+      height: 1px;
+      background: #a8a8b3;
+      margin-left: 16px;
+    }
+
+    &::after {
+      content: ''; //sempre inicia com esse content, senão nada aparece
+      flex: 1; //quantidade flexivel da tela que o container vai ocupar
+      height: 1px;
+      background: #a8a8b3;
+      margin-right: 16px;
+    }
+  }
+}

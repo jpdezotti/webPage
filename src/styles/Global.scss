@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8f8f8; //cor de fundo do app inteiro
+  color: #29292e; //cor de texto padrao
+}
+
+body,
+input,
+button,
+textarea {
+  font: 400 16px 'Roboto', sans-serif; //definindo fonte especificamente para as areas acima. font: 400 (encorpamento padrão da fonte) 16px (tamanho da fonte) 'Roboto'(estilo da fonte),sans (caso a Roboto não carregue)
+}
