@@ -6,8 +6,10 @@ import { Button } from '../components/Button';
 
 import '../styles/auth.scss' //importar o SCSS especifico somente para a pagina que vai utilizar.
 
-export function Home() {
+export function NewRoom() {
+
   return (
+
     <div id="page-auth">
       <div>
         <aside>
@@ -21,18 +23,20 @@ export function Home() {
         porque Class é uma palavra reservada do javascript para criação de Classes */}
         <div className="main-content">
           <img src={letm} alt="Letmeask" />
-          <button className="create-room">
-            <img src={logo} alt="logo do Google" /> Crie sua sala com Google
-          </button>
-          <div className="separator">ou <br /> Entre na sala</div>
+          <h2>Criar uma nova sala</h2>
+
           <form>
-            <input type="text" placeholder="Digite o codigo da sala"></input>
+            <input type="text" placeholder="Nome da Sala"></input>
           </form>
           <Button type="submit">
-            <input type="submit" value="Entrar na sala"></input>
+            <input type="submit" value="Criar sala"></input>
           </Button>
+          <p>
+            Quer entrar em uma sala existente? <a href="#">Clique Aqui</a>
+          </p>
         </div>
       </main>
     </div>
+
   )
 }

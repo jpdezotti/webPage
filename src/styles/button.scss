@@ -1,0 +1,32 @@
+.button {
+  margin-top: 64px; //para distanciar bastante da logo
+  height: 50px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: #835afd;
+  color: #fff;
+  padding: 8 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; //os 3 itens para deixar tudo centralizado
+
+  cursor: pointer; //quando passar o mouse por cima para ficar no cursor
+  border: 0;
+
+  transition: filter 0.2s; //demorar o tempo para que o filtro do Hover funcione
+
+  img {
+    margin-right: 8px;
+  }
+
+  &:not(:disabled):hover {
+    filter: brightness(0.9); //ao passar o mouse por cima ficar mais escurinho
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+}
+
